@@ -9,11 +9,6 @@ int main()
     cout << "Program do obliczania miejsc zerowych funkcji kwadratowej." << endl;
     cout << "Podaj a:";
     cin >> a;
-    if (a==0)
-    {
-        cout << "a nie moze byc 0!";
-        return 0;
-    }
     cout << "Podaj b: ";
     cin >> b;
     cout << "Podaj c: ";
@@ -28,7 +23,7 @@ int main()
     }
     if (delta==0)
     {
-        cout << "Funkca ma jedno miejsce zerowe jakim jest: " << -b/2*a << endl;
+        cout << "Funkcja ma jedno miejsce zerowe jakim jest: " << -b/2*a << endl;
 
     }
 
