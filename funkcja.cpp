@@ -1,11 +1,38 @@
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
 
 using namespace std;
 
 int main()
 {
-    int a , b ,c ,msc1,msc0,delta;
+    int x = 0;
+    while(x>2 || x<1)
+    {
+    cout<<"MENU"<<endl;
+    cout<<"1.Funkca liniowa"<<endl;
+    cout<<"2.Funkcja kwadratowa"<<endl;
+    cout<<"Wybieram : ";
+    cin>>x;
+    system("cls");
+     }
+
+    switch (x)
+    {
+       case 1:
+            int z1 , z2 ,mscl;
+    cout << "Program do obliczania miejsca zerowych funkcji liniowej." << endl;
+    cout << "Podaj a:";
+    cin >> z1;
+    cout << "Podaj b: ";
+    cin >> z2;
+    mscl = (-z2)/z1;
+
+    cout << "Miejsce zerowe jest rowne: " << mscl << endl;
+
+              break;
+       case 2:
+            int a , b ,c ,msc1,msc0,delta;
     cout << "Program do obliczania miejsc zerowych funkcji kwadratowej." << endl;
     cout << "Podaj a:";
     cin >> a;
@@ -31,6 +58,13 @@ int main()
     {
         cout << "Miejsca zerowe funkcji to: " << msc0 << " ," << msc1;
     }
+
+              break;
+           }
+
+
+    system("PAUSE");
+    return EXIT_SUCCESS;
 
 
 
