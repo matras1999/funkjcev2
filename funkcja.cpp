@@ -3,36 +3,22 @@
 #include <cstdlib>
 
 using namespace std;
-
-int main()
+void liniowa()
 {
-    int x = 0;
-    while(x>2 || x<1)
-    {
-    cout<<"MENU"<<endl;
-    cout<<"1.Funkca liniowa"<<endl;
-    cout<<"2.Funkcja kwadratowa"<<endl;
-    cout<<"Wybieram : ";
-    cin>>x;
-    system("cls");
-     }
-
-    switch (x)
-    {
-       case 1:
-            int z1 , z2 ,mscl;
+    int a , b ,msc0;
     cout << "Program do obliczania miejsca zerowych funkcji liniowej." << endl;
     cout << "Podaj a:";
-    cin >> z1;
+    cin >> a;
     cout << "Podaj b: ";
-    cin >> z2;
-    mscl = (-z2)/z1;
+    cin >> b;
+    msc0 = (-b)/a;
 
-    cout << "Miejsce zerowe jest rowne: " << mscl << endl;
+    cout << "Miejsce zerowe jest rowne: " << msc0 << endl;
 
-              break;
-       case 2:
-            int a , b ,c ,msc1,msc0,delta;
+}
+void kwadratowa()
+{
+    int a , b ,c ,msc1,msc0,delta;
     cout << "Program do obliczania miejsc zerowych funkcji kwadratowej." << endl;
     cout << "Podaj a:";
     cin >> a;
@@ -46,7 +32,7 @@ int main()
     if(delta<0)
     {
         cout << "Brak miejsc zerowych!";
-        return 0;
+
     }
     if (delta==0)
     {
@@ -59,7 +45,53 @@ int main()
         cout << "Miejsca zerowe funkcji to: " << msc0 << " ," << msc1;
     }
 
-              break;
+}
+void kanoniczna()
+{
+    double p,q,a,msc0,msc1;
+    cout << "Program do obliczania miejsc zerowych funkcji w postaci kanonicznej."<<endl;
+    cout << "Podaj p: " <<  endl; cin >> p;
+    cout << "Podaj q: " <<endl; cin >> q;
+    cout << "Podaj a: " << endl; cin >>a;
+    if((-q/a)<0)
+    {
+        cout << "Funcja nie ma miejsc zerowych" << endl;
+    }
+    else
+    {
+        msc0=p+sqrt(-q/a);
+        msc1=p-sqrt(-q/a);
+        cout << "Pierwsze miejsce zerowe to: " << msc0 << endl;
+        cout << "Drugie miejsce zerowe to: " << msc1<< endl;
+    }
+}
+int main()
+
+{
+    int x = 0;
+    while(x>3 || x<1)
+    {
+    cout<<"MENU"<<endl;
+    cout<<"1.Funkca liniowa"<<endl;
+    cout<<"2.Funkcja kwadratowa"<<endl;
+    cout<<"3. Funkcja w postaci kanonicznej" <<endl;
+    cout<<"Wybieram : ";
+    cin>>x;
+    system("cls");
+     }
+
+    switch (x)
+    {
+       case 1:
+           liniowa();
+            break;
+       case 2:
+           kwadratowa();
+           break;
+       case 3:
+           kanoniczna();
+
+         break;
            }
 
 
